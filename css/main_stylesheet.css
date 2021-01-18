@@ -7,24 +7,29 @@ body{
   background: grey;
   font-family: 'Roboto', sans-serif;
 }
-
 #main-container{
   display: flex;
-  align-items: flex-start;
   justify-content: center;
   width: 100%;
+  min-height: 80vh;
   position: relative;
 }
+
 /*==START LEFT SECTION STYLING===*/
 .left-section{
   position: relative;
-  height: 65%;
-  width: 100%;
+  max-width: 75%;
+  flex-grow: 2;
   border: solid 3px white;
+  background-image: url("../images/news room.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.left-section img{
-  width: 100%;
-  height: 100%;
+.left-section iframe{
+  position: relative;
+  top: 200px;
+  left: 200px;
 }
 .label {
   position: absolute;
@@ -47,11 +52,12 @@ body{
 /*==START RIGHT SECTION STYLING===*/
 .right-section{
   position: relative;
-  width: 35%;
+  flex-grow: 1;
+  max-width: 25%;
   border: solid 3px white;
 }
 .time-brand-box{
-  background-color: blue;
+  background-color: #1d59f2;
   text-align: center;
   padding: 5px;
 }
@@ -75,17 +81,16 @@ body{
 .right-section .weather-heading{
   border-top: solid 3px white;
   border-bottom: solid 3px white;
-  padding: 10px 0;
-  text-align: center;
+  padding: 10px 0 10px 20px;
+
   color: white;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 30px;
   text-transform: uppercase;
-  margin: 0;
-  background: blue;
+  background: #1d59f2;
 }
 .right-section .current-weather-box{
-  background: blue;
+  background: #3052d9;
   color: white;
   padding: 10px;
 }
@@ -96,7 +101,7 @@ body{
 }
 .right-section .current-weather-box .temp{
   position: relative;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
 }
 .right-section .current-weather-box .temp .deg-symbol-main{
@@ -112,4 +117,55 @@ body{
   font-size: 20px;
   text-transform: uppercase;
 }
+.weather-description-box{
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  border-top: solid 3px white;
+  border-bottom: solid 3px white;
+  padding: 15px 0;
+  background: url("../images/sky background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.weather-description-box h2{
+  background: rgba(48, 82, 217, 0.8);
+  padding: 20px 10px;
+  margin: 0 15px;
+}
+.right-section .live-traffic-box{
+border-bottom: dashed 3px blue;
+background: white;
+}
+.right-section .traffic-heading{
+  border-bottom: solid 3px white;
+  padding: 10px 0 10px 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  background: rgb(0,142,255);
+background: linear-gradient(90deg, rgba(0,142,255,1) 16%, rgba(49,38,212,1) 70%, rgba(48,82,217,1) 100%);
+}
+.right-section .live-traffic-box img{
+  width: 100%;
+}
+.right-section .radio-sponsor-box{
+  border-top: solid 3px white;
+  padding: 10px;
+  background: rgb(0,142,255);
+background: radial-gradient(circle, rgba(0,142,255,1) 16%, rgba(49,38,212,1) 70%, rgba(48,82,217,1) 99%);
+}
+.right-section .radio-sponsor-box img{
+  width: 80%;
+}
 /*==END RIGHT SECTION STYLING===*/
+
+/*==START BOTTOM NEWS TICKER STYLING===*/
+#news-ticker{
+  background: rgb(0,142,255);
+background: radial-gradient(circle, rgba(0,142,255,1) 38%, rgba(49,38,212,1) 80%, rgba(48,82,217,1) 100%);
+}
+/*==END BOTTOM NEWS TICKER STYLING===*/
