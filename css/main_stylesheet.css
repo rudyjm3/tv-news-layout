@@ -57,9 +57,10 @@ body{
   border: solid 3px white;
 }
 .time-brand-box{
+  display: flex;
+  align-items: center;
   background-color: #1d59f2;
-  text-align: center;
-  padding: 5px;
+  padding: 5px 5px 5px 20px;
 }
 .time-brand-box h2{
   position: relative;
@@ -68,46 +69,57 @@ body{
   color: white;
   font-size: 35px;
   font-weight: 900;
-  width: 29%;
+  margin-right: 10px;
+  /*width: 29%;
   padding: 7px 0 0 10px;
-  vertical-align: middle;
+  vertical-align: middle;*/
 }
+
 .time-brand-box .brand{
-  position: relative;
-  display: inline-block;
-  width: 70%;
-  vertical-align: middle;
+  width: 200px;
+  min-width: 150px;
 }
 .right-section .weather-heading{
   border-top: solid 3px white;
   border-bottom: solid 3px white;
   padding: 10px 0 10px 20px;
-
   color: white;
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 25px;
   text-transform: uppercase;
   background: #1d59f2;
 }
 .right-section .current-weather-box{
   background: #3052d9;
   color: white;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
 }
-.right-section .current-weather-box .location{
-  font-size: 20px;
-  font-weight: 500;
+.right-section .current-weather-box #location{
+  font-size: 25px;
+  font-weight: 600;
   text-transform: uppercase;
 }
-.right-section .current-weather-box .temp{
+.right-section .current-weather-box #temp{
   position: relative;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 600;
+  display: inline-block;
+  width: 45%;
+  float: left;
+  line-height: 3;
+}
+.right-section .current-weather-box #weather-icon{
+  display: inline-block;
+  width: 50%;
+}
+.right-section .current-weather-box #weather-icon img{
+  width: 120px;
 }
 .right-section .current-weather-box .temp .deg-symbol-main{
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 45px;
+  left: 45px;*/
+  color: orange;
   font-size: 18px;
   font-weight: 600;
 }
@@ -130,10 +142,11 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.weather-description-box h2{
+.weather-description-box .description-container{
   background: rgba(48, 82, 217, 0.8);
   padding: 20px 10px;
   margin: 0 15px;
+  text-transform: capitalize;
 }
 .right-section .live-traffic-box{
 border-bottom: dashed 3px blue;
@@ -143,8 +156,8 @@ background: white;
   border-bottom: solid 3px white;
   padding: 10px 0 10px 20px;
   color: white;
-  font-weight: 600;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 25px;
   text-transform: uppercase;
   background: rgb(0,142,255);
 background: linear-gradient(90deg, rgba(0,142,255,1) 16%, rgba(49,38,212,1) 70%, rgba(48,82,217,1) 100%);
@@ -167,5 +180,75 @@ background: radial-gradient(circle, rgba(0,142,255,1) 16%, rgba(49,38,212,1) 70%
 #news-ticker{
   background: rgb(0,142,255);
 background: radial-gradient(circle, rgba(0,142,255,1) 38%, rgba(49,38,212,1) 80%, rgba(48,82,217,1) 100%);
+padding: 5px 0;
+border-bottom: solid 8px white;
 }
-/*==END BOTTOM NEWS TICKER STYLING===*/
+#news-ticker .feed-wrapper {
+  display: flex;
+  background: white;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+#news-ticker .brand{
+  /*width: 30%;*/
+  margin-right: 5px;
+  margin-left: 10px;
+}
+#news-ticker .brand img{
+  width: 250px;
+}
+#news-ticker .feed-wrapper{
+  display: flex;
+  align-items: center;
+}
+#news-ticker .feed-wrapper .ticker-feed{
+  padding-top: 5px;
+}
+#news-ticker .feed-wrapper .ticker-feed .locations h2{
+  display: inline-block;
+  color: #3052d9;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#news-ticker .feed-wrapper .ticker-feed .locations img{
+width: 25px;
+margin: 0 15px;
+vertical-align: middle;
+}
+#news-ticker .sponsors{
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+#news-ticker .sponsors .slogan-text{
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+#news-ticker .sponsors .stream-text{
+  display: inline-block;
+  color: #3052d9;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 2px 10px;
+}
+#news-ticker .sponsors .free-text{
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#news-ticker .sponsors img{
+  width: 100px;
+  height: 30px;
+  margin: 0 5px;
+
+/*== img{
+width: 100px;END BOTTOM NEWS TICKER STYLING===*/

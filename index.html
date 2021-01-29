@@ -20,27 +20,29 @@
         <div class="label">
           <h2>live</h2>
         </div>
-        <iframe width="800" height="600" src="https://www.youtube.com/embed/Cv95VmbDVos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!--<iframe width="800" height="600" src="https://www.youtube.com/embed/Cv95VmbDVos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
       </div>
 
       <div class="right-section column">
         <div class="time-brand-box">
-          <h2 class="current time">6:48</h2>
+          <h2 id="current-time">Time</h2>
           <img class="brand" src="images\WRAL-WEATHER-logo.jpg" alt="wral weather logo">
         </div>
         <div class="weather-box">
           <h2 class="weather-heading">local weather</h2>
           <div class="current-weather-box">
-            <span class="location">city</span>
-            <div class="temp">54<span class="deg-symbol-main">°F</span> <span class="weather-icon"><img src="" alt=""></span>
-            </div>
-            <div class="hi-low">high: °F / low: °F
+            <div id="location">city</div>
+            <div id="temp"></div>
+            <div id="weather-icon"><img src="" alt=""></div>
+            <div class="hi-low"><span id="hitemp"></span> / <span id="lowtemp"></span>
             </div>
           </div>
         </div>
         <div class="weather-description-box">
-          <h2>Sunny<span>: </span></>
-          <span class="weather-description">few clouds</span>
+          <div class="description-container">
+            <h2 id="short-weather-description"><span>: </span></h2>
+            <span id="weather-description"></span>
+          </div>
         </div>
         <div class="live-traffic-box">
           <h2 class="traffic-heading">live traffic</h2>
@@ -52,18 +54,32 @@
       </div>
     </section>
     <section id="news-ticker">
-      <div class="brand">
-        <img src="images\WRAL_News_logo.jpg" alt="wral news logo">
-      </div>
-      <div class="ticker-feed">
-
-      </div>
-      <div class="sponsors">
-        <h3>coverage <u>you</u> can count on</h3>
-        <div class="streaming-brands">
-          <h3>streaming free</h3><span><img src="roku" alt=""></span><span><img src="firetv" alt=""></span><span><img src="apple tv" alt=""></span><span><img src="smasung" alt=""></span>
+      <div class="feed-wrapper">
+        <div class="brand">
+          <img src="images\WRAL_News_logo.jpg" alt="wral news logo">
+        </div>
+        <div class="ticker-feed">
+          <div class="locations">
+            <h2>city name:</h2>
+            <h2>high 51, <span class="weather-condition">mostly clear</span></h2>
+            <img class="logo-breaker"src="images\wral-5-cropped.jpg" alt="">
+          </div>
         </div>
       </div>
+
+      <div class="sponsors">
+        <h3 class="slogan-text">coverage <u>you</u> can count on</h3>
+
+        <h3 class="stream-text">streaming <span class="free-text">free</span></h3>
+        <span><img src="images\roku-logo-purple-cropped.png" alt=""></span>
+        <span><img src="images\firetv-logo-cropped.jpg" alt=""></span>
+        <span><img src="images\appletv-logo-cropped.jpg" alt=""></span>
+        <span><img src="images\SamsungLogo-cropped.jpg" alt=""></span>
+
+      </div>
     </section>
+
+    <script src="js\weather.js" charset="utf-8"></script>
+
   </body>
 </html>
